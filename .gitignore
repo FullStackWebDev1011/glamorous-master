@@ -1,0 +1,12 @@
+node_modules
+coverage
+dist
+.opt-in
+.opt-out
+test-ts
+*.log
+yarn.lock
+package-lock.json
+.vscode
+/preact/
+.eslintcache

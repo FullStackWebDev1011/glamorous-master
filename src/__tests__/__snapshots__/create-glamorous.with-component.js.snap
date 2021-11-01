@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resulting component can have its styles extended further: overriding styles via className 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  color: green;
+  font-size: 20px;
+}
+
+<div
+  class="glamor-0"
+/>
+`;
+
+exports[`resulting component can have its styles extended further: overriding styles via css prop 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  color: red;
+  font-size: 25px;
+}
+
+<div
+  class="glamor-0"
+/>
+`;
+
+exports[`resulting component can have its styles extended further: overriding styles via wrapping with glamorous 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  color: blue;
+  font-size: 20px;
+}
+
+<div
+  class="glamor-0"
+/>
+`;
+
+exports[`withComponent composes the component with provided styles 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  color: red;
+  font-size: 20px;
+}
+
+<div
+  class="glamor-0"
+/>
+`;

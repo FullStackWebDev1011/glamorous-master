@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does nothing when receive same theme via props: with theme prop of margin 2px 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "margin": 2,
+    }
+  }
+/>
+`;
+
+exports[`does nothing when receive same theme via props: with theme prop of margin 2px 2`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "margin": 2,
+    }
+  }
+/>
+`;
+
+exports[`merges nested themes 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  padding: 1px;
+  margin: 1px;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  padding: 1px;
+  margin: 2px;
+}
+
+<div>
+  <ThemeProvider
+    theme={
+      Object {
+        "margin": 1,
+        "padding": 1,
+      }
+    }
+  >
+    <div>
+      <glamorous(div)>
+        <div
+          className="glamor-0"
+        />
+      </glamorous(div)>
+      <ThemeProvider
+        theme={
+          Object {
+            "margin": 2,
+          }
+        }
+      >
+        <glamorous(div)>
+          <div
+            className="glamor-1"
+          />
+        </glamorous(div)>
+      </ThemeProvider>
+    </div>
+  </ThemeProvider>
+</div>
+`;
+
+exports[`propagates theme updates through nested ThemeProviders 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  background-color: black;
+  color: red;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "bg": "black",
+    }
+  }
+>
+  <ThemeProvider
+    theme={[Function]}
+  >
+    <glamorous(div)>
+      <div
+        className="glamor-0"
+      />
+    </glamorous(div)>
+  </ThemeProvider>
+</ThemeProvider>
+`;
+
+exports[`renders a component with theme 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  color: red;
+  padding: 10px;
+}
+
+<div
+  class="glamor-0"
+/>
+`;
+
+exports[`renders if children are null 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "padding": 1,
+    }
+  }
+/>
+`;
+
+exports[`renders inverted theme 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  background-color: white;
+  color: palevioletred;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  background-color: palevioletred;
+  color: white;
+}
+
+<div>
+  <div
+    class="glamor-0"
+  />
+  <div
+    class="glamor-1"
+  />
+</div>
+`;
+
+exports[`theme properties updates get propagated down the tree: with theme prop of padding 10px 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  color: red;
+  padding: 10px;
+}
+
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <glamorous(div)>
+      <div
+        className="glamor-0"
+      />
+    </glamorous(div)>
+  </ThemeProvider>
+</Component>
+`;
+
+exports[`theme properties updates get propagated down the tree: with theme prop of padding 20px 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  color: red;
+  padding: 20px;
+}
+
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "padding": 20,
+      }
+    }
+  >
+    <glamorous(div)>
+      <div
+        className="glamor-0"
+      />
+    </glamorous(div)>
+  </ThemeProvider>
+</Component>
+`;
+
+exports[`throws if inverted theme is not object 1`] = `"[ThemeProvider] Please return an object from your theme function, i.e. theme={() => ({})}!"`;

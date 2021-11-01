@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should pass glam object prop 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  margin-left: 24px;
+  font-size: 20px;
+}
+
+<div
+  class="glamor-0"
+  id="hey-there"
+/>
+`;

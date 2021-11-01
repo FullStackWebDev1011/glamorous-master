@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pass through when no theme provider found up tree: without theme provider 1`] = `
+<Component>
+  <ThemedComponent>
+    <Component
+      theme={Object {}}
+    >
+      <div />
+    </Component>
+  </ThemedComponent>
+</Component>
+`;
+
+exports[`renders a non-glamorous component with theme 1`] = `
+<div
+  style="padding:10px"
+/>
+`;
+
+exports[`theme properties updates get propagated down the tree: with theme prop of padding 10px 1`] = `
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <ThemedComponent>
+      <Component
+        theme={
+          Object {
+            "padding": 10,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "padding": 10,
+            }
+          }
+        />
+      </Component>
+    </ThemedComponent>
+  </ThemeProvider>
+</Component>
+`;
+
+exports[`theme properties updates get propagated down the tree: with theme prop of padding 20px 1`] = `
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "padding": 20,
+      }
+    }
+  >
+    <ThemedComponent>
+      <Component
+        theme={
+          Object {
+            "padding": 20,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "padding": 20,
+            }
+          }
+        />
+      </Component>
+    </ThemedComponent>
+  </ThemeProvider>
+</Component>
+`;
+
+exports[`works properly with classes: with theme prop of padding 10px 1`] = `
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <ThemedComponent>
+      <Child
+        theme={
+          Object {
+            "padding": 10,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "padding": 10,
+            }
+          }
+        />
+      </Child>
+    </ThemedComponent>
+  </ThemeProvider>
+</Component>
+`;
